@@ -1,4 +1,6 @@
+# =========================
 # Python
+# =========================
 __pycache__/
 *.py[cod]
 *$py.class
@@ -20,43 +22,96 @@ wheels/
 .installed.cfg
 *.egg
 
+# =========================
 # Virtual environments
+# =========================
 venv/
-ENV/
-env/
 .venv/
+env/
+ENV/
 
-# IDE
-.idea/
+# =========================
+# IDE / Editor
+# =========================
 .vscode/
+.idea/
 *.swp
 *.swo
 *~
 
-# Project specific
-dataset/
-*.npz
-*.png
-*.jpg
-*.jpeg
-!examples/*.png
-
-# OS
+# =========================
+# OS files
+# =========================
 .DS_Store
 Thumbs.db
 
-# Logs
+# =========================
+# Logs / temporary files
+# =========================
 *.log
-data/
-output/
+*.tmp
 
+# =========================
+# Large model files
+# =========================
+output/
+*.safetensors
+*.pt
+*.pth
+*.onnx
+*.ckpt
+
+# =========================
+# Datasets / private data
+# =========================
+data/
+dataset/
+real_tests/
+roboflow_khmer_id/
+
+# =========================
+# Private/raw images
+# =========================
+*.jpg
+*.jpeg
+*.png
+*.webp
+
+# Allow safe public example images only
+!examples/
+!examples/*.jpg
+!examples/*.jpeg
+!examples/*.png
+!examples/*.webp
+
+# =========================
+# HuggingFace cache
+# =========================
+.cache/
+huggingface/
+
+# =========================
+# Node / JavaScript dependencies
+# =========================
 node_modules/
+
+# =========================
+# Benchmark temporary files
+# =========================
 benchmark/results.*
 benchmark/temp/
 benchmark/*.txt
+
+# Allow benchmark public result images
 !benchmark/benchmark_graph.png
 !benchmark/benchmark_table.png
+
+# =========================
+# Optional local-only folders
+# =========================
 fonts/
 js/
 
+# Ignore tests only if they contain private data.
+# Remove this line if your tests are safe Python test scripts.
 tests/
